@@ -1,0 +1,51 @@
+@charset "utf-8";
+
+// Set your brand colors
+$purple: #8A4D76;
+$pink: #FA7C91;
+$beige-light: #D0D1CD;
+$beige-lighter: #EFF0EB;
+
+$white: #FFFFFF;
+$grayish-orange: #F0E5DE;
+$grayish-blue-green: #ABD0CE;
+$brown: #7C7877;
+$gray: #D9D4CF;
+
+
+// Update Bulma's global variables
+$family-sans-serif: "Kosugi Maru", sans-serif;
+$grey-dark: $brown;
+$grey-darker: $brown;
+$grey-light: $beige-light;
+$primary: $purple;
+$link: $pink;
+$widescreen-enabled: false;
+$fullhd-enabled: false;
+
+// Update some of Bulma's component variables
+$body-background-color: $white;
+$control-border-width: 2px;
+$input-border-color: transparent;
+$input-shadow: none;
+$column-gap: 1.5rem;
+
+// Import only what you need from Bulma
+@import "~bulma/bulma.sass";
+
+//sideber
+.account {
+    color: #DE7E73;
+}
+
+.twitter {
+    color: #6AAFE6;
+}
+
+.github {
+    color: #333030;
+}
+
+.email {
+    color: #7C7877;
+}
