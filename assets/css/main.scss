@@ -33,19 +33,77 @@ $column-gap: 1.5rem;
 // Import only what you need from Bulma
 @import "~bulma/bulma.sass";
 
+//header
+header.hero.head {
+  background-color: $grayish-blue-green;
+  margin-bottom: 8px;
+  .blog-title {
+    margin-left: 20px;
+  }
+}
+
+//footer
+footer.hero.foot {
+  background-color: $grayish-blue-green;
+  margin-top: 8px;
+  .copyright {
+    padding: 5px 0;
+  }
+}
+
 //sideber
 .account {
-    color: #DE7E73;
+  color: #DE7E73;
 }
 
 .twitter {
-    color: #6AAFE6;
+  color: #6AAFE6;
 }
 
 .github {
-    color: #333030;
+  color: #333030;
 }
 
 .email {
-    color: #7C7877;
+  color: #7C7877;
+}
+
+.profile {
+  padding: 18px 25px;
+  border: #F0E5DE dotted;
+  min-height: 400px;
+  height: 100%;
+  .picture {
+    border: #D9D4CF 0.25px solid;
+    margin-bottom: 15px;
+  }
+}
+
+//articles(index)
+
+.tile.is-child.articles {
+  min-height: 400px;
+  padding: 25px 30px;
+}
+
+.column .card {
+  &.card-list {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    .flex {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      .bottom-align {
+        position: absolute;
+        bottom: 0;
+        padding: 5px 0;
+      }
+    }
+    .time {
+      color: $gray;
+    }
+  }
 }

@@ -1,11 +1,11 @@
 <template>
-  <div class="hero" style="background-color:#ABD0CE;margin-bottom:8px;">
+  <header class="hero head">
     <div class="hero-head">
       <nav class="navbar">
         <div class="container">
-        <div class="navbar-brand" style="margin-left:20px">
+        <div class="navbar-brand blog-title">
           <div class="navbar-item">
-            <h1 class="title is-4" style="color:#7C7877">
+            <h1 class="title is-4">
               {{ title }}
             </h1>
           </div>
@@ -13,7 +13,7 @@
         </div>
       </nav>
     </div>
-  </div>
+  </header>
 </template>
 
 <script>
