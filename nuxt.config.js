@@ -51,7 +51,7 @@ module.exports = {
   ],
   webfontloader: {
     google: {
-      families: ['Kosugi+Maru']
+      families: ['McLaren']
     }
   },
   /*

@@ -6,17 +6,16 @@ $pink: #FA7C91;
 $beige-light: #D0D1CD;
 $beige-lighter: #EFF0EB;
 
-$white: #FFFFFF;
-$grayish-orange: #F0E5DE;
-$grayish-blue-green: #ABD0CE;
-$brown: #7C7877;
-$gray: #D9D4CF;
+$white: #FFFFF3;
+$grayish-purple: #A593E0; //#ABD0CE;
+$gray: #566270; //#7C7877;
+$beige: #E0E3DA; //#D9D4CF;
 
 
 // Update Bulma's global variables
-$family-sans-serif: "Kosugi Maru", sans-serif;
-$grey-dark: $brown;
-$grey-darker: $brown;
+$family-sans-serif: "McLaren", sans-serif;
+$grey-dark: $gray;
+$grey-darker: $gray;
 $grey-light: $beige-light;
 $primary: $purple;
 $link: $pink;
@@ -28,30 +27,31 @@ $body-background-color: $white;
 $control-border-width: 2px;
 $input-border-color: transparent;
 $input-shadow: none;
-$column-gap: 1.5rem;
 
 // Import only what you need from Bulma
 @import "~bulma/bulma.sass";
 
 //header
 header.hero.head {
-  background-color: $grayish-blue-green;
-  margin-bottom: 8px;
+  background-color: $grayish-purple;
   .blog-title {
-    margin-left: 20px;
+    margin-left: 0.25rem;
   }
 }
 
 //footer
 footer.hero.foot {
-  background-color: $grayish-blue-green;
-  margin-top: 8px;
+  background-color: $grayish-purple;
   .copyright {
-    padding: 5px 0;
+    padding: 0.5rem 0.75rem;
   }
 }
 
 //sideber
+.sideber {
+  padding: 1.25rem 0.5rem 1.25rem 0;
+}
+
 .account {
   color: #DE7E73;
 }
@@ -69,21 +69,20 @@ footer.hero.foot {
 }
 
 .profile {
-  padding: 18px 25px;
-  border: #F0E5DE dotted;
+  padding: 1.125rem 0.75rem;
+  border-left: $beige dotted;
   min-height: 400px;
   height: 100%;
   .picture {
-    border: #D9D4CF 0.25px solid;
-    margin-bottom: 15px;
+    //border: #D9D4CF 0.25px solid;
+    margin-bottom: 0.3rem;
   }
 }
 
 //articles(index)
-
-.tile.is-child.articles {
+.tile.articles {
   min-height: 400px;
-  padding: 25px 30px;
+  padding: 2rem 1.25rem;
 }
 
 .column .card {
@@ -99,11 +98,41 @@ footer.hero.foot {
       .bottom-align {
         position: absolute;
         bottom: 0;
-        padding: 5px 0;
+        padding: 0.3rem 0;
       }
     }
     .time {
       color: $gray;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  //sideber
+  .sideber {
+    padding: initial;
+  }
+
+  .image.is-square.picture {
+    width: 55%;
+    height: 55%;
+    padding-top: 55%;
+    margin: auto;
+  }
+
+  .profile {
+    min-height: initial;
+    min-height: auto;
+    margin: 0 1.5rem 1rem;
+    padding: 0.3rem;
+    overflow: hidden;
+    .tile.is-child {
+      width: 55%;
+      float: left;
+      padding: inherit;
+      &.prof-info {
+        width: 45%;
+      }
     }
   }
 }

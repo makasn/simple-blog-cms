@@ -1,84 +1,17 @@
 <template>
   <div>
-    <hero-head :title="title"> </hero-head>
+    <hero-head :title="blog_title"> </hero-head>
     <main>
       <div class="container">
         <div class="tile is-ancestor">
-          <div class="tile is-parent">
-            <div class="tile is-child articles">
-              <div class="columns">
-              <article class="column is-half">
-                <div class="card card-list">
-                  <div class="card-image">
-                    <figure class="image is-3by2">
-                      <img src="~assets/img/default.jpg" alt="Placeholder image">
-                    </figure>
-                  </div>
-                  <div class="card-content flex">
-                    <div class="content">
-                      <p class="title is-5">個人ブログ用のCMSをNuxt.js×GAEで作った話</p>
-                    </div>
-                    <div class="bottom-align time">
-                      <time datetime="2016-1-1">1 Jan 2016</time>
-                    </div>
-                  </div>
-                </div>
-              </article>
-              <article class="column is-half">
-                <div class="card card-list">
-                  <div class="card-image">
-                    <figure class="image is-3by2">
-                      <img src="~assets/img/default_1.jpg" alt="Placeholder image">
-                    </figure>
-                  </div>
-                  <div class="card-content flex">
-                    <div class="content">
-                      <p class="title is-5">sample</p>
-                    </div>
-                    <div class="bottom-align time">
-                      <time datetime="2016-1-1">1 Jan 2016</time>
-                    </div>
-                  </div>
-                </div>
-              </article>
-              </div>
-              <div class="columns">
-              <article class="column is-half">
-                <div class="card card-list">
-                  <div class="card-image">
-                    <figure class="image is-3by2">
-                      <img src="~assets/img/default.jpg" alt="Placeholder image">
-                    </figure>
-                  </div>
-                  <div class="card-content flex">
-                    <div class="content">
-                      <p class="title is-5">個人ブログ用のCMSをNuxt.js×GAEで作った話</p>
-                    </div>
-                    <div class="bottom-align time">
-                      <time datetime="2016-1-1">1 Jan 2016</time>
-                    </div>
-                  </div>
-                </div>
-              </article>
-              <article class="column is-half">
-                <div class="card card-list">
-                  <div class="card-image">
-                    <figure class="image is-3by2">
-                      <img src="~assets/img/default_1.jpg" alt="Placeholder image">
-                    </figure>
-                  </div>
-                  <div class="card-content flex">
-                    <div class="content">
-                      <p class="title is-5">sample</p>
-                    </div>
-                    <div class="bottom-align time">
-                      <time datetime="2016-1-1">1 Jan 2016</time>
-                    </div>
-                  </div>
-                  
-                </div>
-              </article>
-              </div>
+          <div class="tile articles">
+            <div class="columns is-multiline is-variable is-2">
+              <list-article
+                v-for="(article, index) in articles"
+                v-bind:article="article"
+                v-bind:index="index"
+                v-bind:key="article.id"
+              ></list-article>
             </div>
           </div>
           <sideber :account_name="account_name"></sideber>
@@ -93,19 +26,27 @@
 import HeroHead from '~/components/HeroHead.vue'
 import HeroFoot from '~/components/HeroFoot.vue'
 import Sideber from '~/components/Sideber.vue'
+import ListArticle from '~/components/ListArticle.vue'
 
 export default {
   //layout: 'blog',
   components: {
     HeroHead,
     HeroFoot,
-    Sideber
+    Sideber,
+    ListArticle
   },
   asyncData (context) {
     return {　
-      title: 'Nekoになりたい',
-      copyrights: 'makasn',
-      account_name: 'makasn'
+      blog_title: 'Blog Title',
+      copyrights: 'author',
+      account_name: 'author',
+      articles: [
+      { id: 1, title: 'Learn JavaScript',  date: '1 Nov 2019', image: 'sample.png' },
+      { id: 2, title: 'Learn Vue', date:'1 Oct 2019', image: 'sample.png' },
+      { id: 3, title: 'Build something awesome', date:'1 Sept 2019', image: 'sample.png' },
+      { id: 4, title: 'Sample', date:'1 Aug 2019', image: 'sample.png' }
+    ]
     }
   }
 }
