@@ -51,12 +51,16 @@ module.exports = {
     'nuxt-webfontloader',
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
-    '@nuxtjs/pwa'
+    '@nuxtjs/pwa',
+    '@nuxtjs/markdownit'
   ],
   webfontloader: {
     google: {
       families: ['McLaren', 'M PLUS Rounded 1c']
     }
+  },
+  markdownit: {
+    injected: true
   },
   /*
    ** Axios module configuration

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <hero-head :title="blog_title"> </hero-head>
+    <hero-head :title="blog_title"></hero-head>
     <main>
       <div class="container">
         <div class="tile is-ancestor">
