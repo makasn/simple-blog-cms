@@ -31,6 +31,11 @@ $input-shadow: none;
 // Import only what you need from Bulma
 @import "~bulma/bulma.sass";
 
+
+main {
+  min-height: 90vh;
+}
+
 //header
 header.hero.head {
   background-color: $grayish-purple;
@@ -71,7 +76,6 @@ footer.hero.foot {
 .profile {
   padding: 1.125rem 0.75rem;
   border-left: $beige dotted;
-  min-height: 400px;
   height: 100%;
   .picture {
     //border: #D9D4CF 0.25px solid;
@@ -81,7 +85,6 @@ footer.hero.foot {
 
 //articles(index)
 .tile.articles {
-  min-height: 400px;
   padding: 2rem 1.25rem;
 }
 
