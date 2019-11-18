@@ -1,5 +1,9 @@
 module.exports = {
   mode: 'universal',
+  server: {
+    port: 8000, // デフォルト: 3000
+    host: '0.0.0.0' // デフォルト: localhost
+  },
   /*
    ** Headers of the page
    */
@@ -9,7 +13,7 @@ module.exports = {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
-        hid: 'description',
+        hid: 'description', 
         name: 'description',
         content: process.env.npm_package_description || ''
       }
@@ -51,7 +55,7 @@ module.exports = {
   ],
   webfontloader: {
     google: {
-      families: ['McLaren']
+      families: ['McLaren', 'M PLUS Rounded 1c']
     }
   },
   /*
