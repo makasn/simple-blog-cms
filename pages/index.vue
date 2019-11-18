@@ -37,16 +37,16 @@ export default {
     ListArticle
   },
   asyncData (context) {
-    return {　
+    return {
       blog_title: 'Blog Title',
       copyrights: 'author',
       account_name: 'author',
       articles: [
-      { id: 1, title: 'Learn JavaScript',  date: '1 Nov 2019', image: 'sample.png' },
-      { id: 2, title: 'Learn Vue', date:'1 Oct 2019', image: 'sample.png' },
-      { id: 3, title: 'Build something awesome', date:'1 Sept 2019', image: 'sample.png' },
-      { id: 4, title: 'Sample', date:'1 Aug 2019', image: 'sample.png' }
-    ]
+        { id: 1, title: '日本語フォントあいうえお',  date: '1 Nov 2019', image: 'sample.png' },
+        { id: 2, title: 'Learn Vue', date:'1 Oct 2019', image: 'sample.png' },
+        { id: 3, title: 'Build something awesome', date:'1 Sept 2019', image: 'sample.png' },
+        { id: 4, title: 'Sample', date:'1 Aug 2019', image: 'sample.png' }
+      ]
     }
   }
 }
