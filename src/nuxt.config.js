@@ -51,7 +51,7 @@ module.exports = {
     'nuxt-webfontloader',
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
-    '@nuxtjs/pwa',
+    //'@nuxtjs/pwa',
     '@nuxtjs/markdownit'
   ],
   webfontloader: {
@@ -70,7 +70,9 @@ module.exports = {
   /*
    ** Build configuration
    */
+  buildDir: '../functions/nuxt',
   build: {
+    publicPath: '/assets/',
     postcss: {
       preset: {
         features: {
