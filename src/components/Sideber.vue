@@ -56,7 +56,7 @@
                 <i class="fa fa-pencil"></i>
               </span>
             </p>
-          <div>
+          </div>
           <div class="buttons is-right" style="margin-top: 0.5rem">
             <input class="button is-primary is-light" type="submit" value="Submit">
           </div>

@@ -27,6 +27,7 @@ import HeroHead from '~/components/HeroHead.vue'
 import HeroFoot from '~/components/HeroFoot.vue'
 import Sideber from '~/components/Sideber.vue'
 import ListArticle from '~/components/ListArticle.vue'
+import db from '~/plugins/firebase.js'
 
 export default {
   //layout: 'blog',
@@ -37,6 +38,13 @@ export default {
     ListArticle
   },
   asyncData (context) {
+    db.collection('articles').get()
+      .then((querySnapshot) => {
+        querySnapshot.forEach((doc) => {
+          console.log(doc.data())
+        })
+      })
+
     return {
       blog_title: 'Blog Title',
       copyrights: 'author',

@@ -93,3 +93,4 @@ sw.*
 # firebase hosting
 public/*
 !.gitkeep
+.firebase/*
